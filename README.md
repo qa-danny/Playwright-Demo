@@ -74,4 +74,8 @@ Run a single test by name (grep):
 npx playwright test -g "has title"
 ```
 
+Run a single file in only Chromium, viewing in browser:
+
+```bash
+npx playwright test tests/example.test.ts --headed --project=chromium
 ---
