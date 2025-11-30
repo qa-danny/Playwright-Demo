@@ -78,4 +78,5 @@ Run a single file in only Chromium, viewing in browser:
 
 ```bash
 npx playwright test tests/example.test.ts --headed --project=chromium
+```
 ---
