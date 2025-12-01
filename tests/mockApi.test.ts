@@ -1,5 +1,4 @@
 import { test as setup } from '../fixtures/test-options';
-import { MockApiPage } from '../pages/mockApiPage';
 import { expect } from '@playwright/test';
 import fruitData from '../fixtures/fruits-id.json';
 
@@ -10,7 +9,10 @@ setup.describe('Mock API Tests Demo', () => {
         await route.fulfill({ json: fruitData });
       });
       await mockApiPage.navigate();
-      await expect(page.getByText('Strawberry')).toBeVisible();
+
+      // Verify that the first item is 'Banana' matching the mocked data
+      const items = await mockApiPage.getAllListItems();
+      await expect(items[0]).toBe('Banana');
     });
   });
 });
