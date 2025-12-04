@@ -1,0 +1,394 @@
+[
+  {
+    "orderId": "ORD-1001",
+    "orderDate": "2025-02-10",
+    "orderStatus": "Shipped",
+    "subtotal": 129.99,
+    "tax": 10.40,
+    "orderTotal": 140.39,
+    "shippingAddress": {
+      "name": "Daniel Stutzman",
+      "street": "123 Desert Willow Ave",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89123"
+    },
+    "billingAddress": {
+      "name": "Daniel Stutzman",
+      "street": "123 Desert Willow Ave",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zip": "89123"
+    },
+    "items": [
+      {
+        "productName": "Air Max Runner",
+        "brandName": "Nike",
+        "size": "11",
+        "width": "D",
+        "color": "Black/White",
+        "price": 129.99
+      }
+    ]
+  },
+  {
+    "orderId": "ORD-1002",
+    "orderDate": "2025-02-12",
+    "orderStatus": "Delivered",
+    "subtotal": 89.50,
+    "tax": 7.16,
+    "orderTotal": 96.66,
+    "shippingAddress": {
+      "name": "Samantha Collins",
+      "street": "45 Oakwood Drive",
+      "city": "Seattle",
+      "state": "WA",
+      "zip": "98109"
+    },
+    "billingAddress": {
+      "name": "Samantha Collins",
+      "street": "906 Pine Street",
+      "city": "Seattle",
+      "state": "WA",
+      "zip": "98101"
+    },
+    "items": [
+      {
+        "productName": "Classic Canvas Sneaker",
+        "brandName": "Converse",
+        "size": "8",
+        "width": "B",
+        "color": "White",
+        "price": 49.50
+      },
+      {
+        "productName": "No-Show Socks (3 Pack)",
+        "brandName": "Hanes",
+        "size": "M",
+        "width": "N/A",
+        "color": "Black",
+        "price": 40.00
+      }
+    ]
+  },
+  {
+    "orderId": "ORD-1003",
+    "orderDate": "2025-02-13",
+    "orderStatus": "Processing",
+    "subtotal": 220.00,
+    "tax": 17.60,
+    "orderTotal": 237.60,
+    "shippingAddress": {
+      "name": "Michael Green",
+      "street": "780 Maple Court",
+      "city": "Denver",
+      "state": "CO",
+      "zip": "80203"
+    },
+    "billingAddress": {
+      "name": "Michael Green",
+      "street": "780 Maple Court",
+      "city": "Denver",
+      "state": "CO",
+      "zip": "80203"
+    },
+    "items": [
+      {
+        "productName": "Trail Blazer Boot",
+        "brandName": "Timberland",
+        "size": "10.5",
+        "width": "EE",
+        "color": "Brown",
+        "price": 150.00
+      },
+      {
+        "productName": "All-Weather Socks (2 Pack)",
+        "brandName": "Smartwool",
+        "size": "L",
+        "width": "N/A",
+        "color": "Gray",
+        "price": 70.00
+      }
+    ]
+  },
+  {
+    "orderId": "ORD-1004",
+    "orderDate": "2025-02-15",
+    "orderStatus": "Cancelled",
+    "subtotal": 59.99,
+    "tax": 4.80,
+    "orderTotal": 64.79,
+    "shippingAddress": {
+      "name": "Sarah Thompson",
+      "street": "88 Riverside Lane",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701"
+    },
+    "billingAddress": {
+      "name": "Sarah Thompson",
+      "street": "88 Riverside Lane",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701"
+    },
+    "items": [
+      {
+        "productName": "Everyday Slip-On",
+        "brandName": "Vans",
+        "size": "7",
+        "width": "B",
+        "color": "Checkerboard",
+        "price": 59.99
+      }
+    ]
+  },
+  {
+    "orderId": "ORD-1005",
+    "orderDate": "2025-02-16",
+    "orderStatus": "Delivered",
+    "subtotal": 310.00,
+    "tax": 25.55,
+    "orderTotal": 335.55,
+    "shippingAddress": {
+      "name": "Jonathan Lee",
+      "street": "552 Lakeview Road",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "60611"
+    },
+    "billingAddress": {
+      "name": "Jonathan Lee",
+      "street": "123 Harbor Drive",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "60601"
+    },
+    "items": [
+      {
+        "productName": "Gel-Kayano 30",
+        "brandName": "ASICS",
+        "size": "12",
+        "width": "D",
+        "color": "Blue/Black",
+        "price": 160.00
+      },
+      {
+        "productName": "Performance Running Shorts",
+        "brandName": "ASICS",
+        "size": "XL",
+        "width": "N/A",
+        "color": "Black",
+        "price": 50.00
+      },
+      {
+        "productName": "Running Jacket",
+        "brandName": "ASICS",
+        "size": "L",
+        "width": "N/A",
+        "color": "Gray",
+        "price": 100.00
+      }
+    ]
+  },
+  {
+    "orderId": "ORD-1006",
+    "orderDate": "2025-02-16",
+    "orderStatus": "Shipped",
+    "subtotal": 140.00,
+    "tax": 11.20,
+    "orderTotal": 151.20,
+    "shippingAddress": {
+      "name": "Emily Parker",
+      "street": "120 Cherry Blossom Way",
+      "city": "Phoenix",
+      "state": "AZ",
+      "zip": "85008"
+    },
+    "billingAddress": {
+      "name": "Emily Parker",
+      "street": "120 Cherry Blossom Way",
+      "city": "Phoenix",
+      "state": "AZ",
+      "zip": "85008"
+    },
+    "items": [
+      {
+        "productName": "Classic Leather Sneaker",
+        "brandName": "Reebok",
+        "size": "8.5",
+        "width": "B",
+        "color": "White",
+        "price": 75.00
+      },
+      {
+        "productName": "Athletic Tank Top",
+        "brandName": "Reebok",
+        "size": "M",
+        "width": "N/A",
+        "color": "Pink",
+        "price": 25.00
+      },
+      {
+        "productName": "Training Socks (3 Pack)",
+        "brandName": "Reebok",
+        "size": "M",
+        "width": "N/A",
+        "color": "White",
+        "price": 40.00
+      }
+    ]
+  },
+  {
+    "orderId": "ORD-1007",
+    "orderDate": "2025-02-17",
+    "orderStatus": "Processing",
+    "subtotal": 99.99,
+    "tax": 8.25,
+    "orderTotal": 108.24,
+    "shippingAddress": {
+      "name": "Mark Davis",
+      "street": "220 Elm Street",
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97205"
+    },
+    "billingAddress": {
+      "name": "Mark Davis",
+      "street": "781 Pearl Street",
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97209"
+    },
+    "items": [
+      {
+        "productName": "Workwear Oxford",
+        "brandName": "Clarks",
+        "size": "11",
+        "width": "EE",
+        "color": "Tan",
+        "price": 99.99
+      }
+    ]
+  },
+  {
+    "orderId": "ORD-1008",
+    "orderDate": "2025-02-18",
+    "orderStatus": "Delivered",
+    "subtotal": 180.00,
+    "tax": 14.40,
+    "orderTotal": 194.40,
+    "shippingAddress": {
+      "name": "Olivia Perez",
+      "street": "90 Sunrise Trail",
+      "city": "Miami",
+      "state": "FL",
+      "zip": "33131"
+    },
+    "billingAddress": {
+      "name": "Olivia Perez",
+      "street": "90 Sunrise Trail",
+      "city": "Miami",
+      "state": "FL",
+      "zip": "33131"
+    },
+    "items": [
+      {
+        "productName": "Wave Rider 27",
+        "brandName": "Mizuno",
+        "size": "7.5",
+        "width": "B",
+        "color": "Purple/White",
+        "price": 130.00
+      },
+      {
+        "productName": "Yoga Leggings",
+        "brandName": "Mizuno",
+        "size": "S",
+        "width": "N/A",
+        "color": "Black",
+        "price": 50.00
+      }
+    ]
+  },
+  {
+    "orderId": "ORD-1009",
+    "orderDate": "2025-02-20",
+    "orderStatus": "Processing",
+    "subtotal": 250.00,
+    "tax": 20.00,
+    "orderTotal": 270.00,
+    "shippingAddress": {
+      "name": "Alex Morgan",
+      "street": "3 Redwood Terrace",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94105"
+    },
+    "billingAddress": {
+      "name": "Alex Morgan",
+      "street": "3 Redwood Terrace",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94105"
+    },
+    "items": [
+      {
+        "productName": "Hiking Sandal",
+        "brandName": "Keen",
+        "size": "9.5",
+        "width": "D",
+        "color": "Olive",
+        "price": 120.00
+      },
+      {
+        "productName": "Outdoor Backpack",
+        "brandName": "Keen",
+        "size": "One Size",
+        "width": "N/A",
+        "color": "Blue",
+        "price": 130.00
+      }
+    ]
+  },
+  {
+    "orderId": "ORD-1010",
+    "orderDate": "2025-02-21",
+    "orderStatus": "Shipped",
+    "subtotal": 75.00,
+    "tax": 6.15,
+    "orderTotal": 81.15,
+    "shippingAddress": {
+      "name": "Jessica Martinez",
+      "street": "220 Hampton Blvd",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28202"
+    },
+    "billingAddress": {
+      "name": "Jessica Martinez",
+      "street": "92 Lake Street",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28208"
+    },
+    "items": [
+      {
+        "productName": "Slip-On Comfort Mule",
+        "brandName": "Crocs",
+        "size": "6",
+        "width": "B",
+        "color": "Navy",
+        "price": 40.00
+      },
+      {
+        "productName": "Classic Clog Charms (5 Pack)",
+        "brandName": "Crocs",
+        "size": "N/A",
+        "width": "N/A",
+        "color": "Multi",
+        "price": 35.00
+      }
+    ]
+  }
+]
