@@ -1,8 +1,8 @@
-import { test as setup } from '../fixtures/test-options';
+import { test as setup, tags } from '../fixtures/test-options';
 import { expect } from '@playwright/test';
 
-setup.describe('Article Tests Demo', () => {
-  setup('should access Checkbox page function', async ({ articlePage, page }) => {
+setup.describe('Article Tests Demo', { tag: tags.SMOKE }, () => {
+  setup('should access Checkbox page function', async ({ articlePage }) => {
     await setup.step('Navigate to article page', async () => {
       await articlePage.navigateToArticle('checkboxes');
       const title = await articlePage.getArticleTitle();

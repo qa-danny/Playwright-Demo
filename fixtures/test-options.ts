@@ -5,4 +5,10 @@ const test = mergeTests(pageObjectFixture);
 
 const expect = base.expect;
 
-export { test, expect };
+const tags = {
+  SMOKE: '@smoke',
+  INTEG: '@integ',
+  E2E: '@e2e',
+};
+
+export { expect, tags, test };
