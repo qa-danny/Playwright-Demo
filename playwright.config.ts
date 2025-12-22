@@ -31,6 +31,14 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
+        launchOptions: {
+          args: [
+            '--disable-features=AutofillServerCommunication',
+            '--disable-autofill',
+            '--disable-save-password-bubble',
+            '--disable-extensions'
+          ]
+        },
         viewport: { width: 1350, height: 800 },
       },
     },
