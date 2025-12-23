@@ -1,5 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
 
+const desktopViewport = { width: 1350, height: 800 };
+const mobileViewport = { width: 430, height: 845 };
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -39,7 +42,7 @@ export default defineConfig({
             '--disable-extensions'
           ]
         },
-        viewport: { width: 1350, height: 800 },
+        viewport: desktopViewport,
       },
     },
     {
@@ -50,7 +53,23 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-
+    {
+      name: 'firefox-mobile',
+      use: {
+        ...devices['Desktop Firefox'],
+        launchOptions: {
+          firefoxUserPrefs: {
+            "extensions.formautofill.addresses.capture.enabled": false,
+            "browser.formautofill.addresses.enabled": false,
+            "browser.formautofill.creditCards.enabled": false
+          },
+        },
+        hasTouch: true,
+        // screen: mobileViewport,
+        deviceScaleFactor: 2,
+        viewport: mobileViewport
+      }
+    }
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
@@ -70,7 +89,7 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  ],
+  ]
 
   /* Run your local dev server before starting the tests */
   // webServer: {
