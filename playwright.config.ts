@@ -18,17 +18,28 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
+    /* Can use CLI Override options if provided. */
     baseURL: 'https://the-internet.herokuapp.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    actionTimeout: 0,
+    ignoreHTTPSErrors: true,
+    video: 'retain-on-failure',
+    screenshot: 'only-on-failure'
   },
 
   /* Configure projects for major browsers */
   projects: [
+    // This can be configured to run smoke/p0 tests, they're run successfully before the
+    // rest of the projects are run with the introduction of the `dependencies` option.
+    {
+      name: 'setup', // if for smoke tests, rename to 'smoke'
+      testMatch: /.*\.setup\.ts/ // if p0 tests want to be renamed, change name to `test.smoke.ts` and they will be picked up.
+    },
     {
       name: 'chromium',
+      dependencies: ['setup'],
       use: {
         ...devices['Desktop Chrome'],
         launchOptions: {
@@ -39,6 +50,7 @@ export default defineConfig({
             '--disable-extensions'
           ]
         },
+        permissions: ['clipboard-read'],
         viewport: { width: 1350, height: 800 },
       },
     },
