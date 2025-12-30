@@ -6,7 +6,6 @@
     "test:all": "playwright test",
     "test:headed": "playwright test --headed",
     "test:headed:chromium": "playwright test --headed --project chromium",
-    "test:report": "playwright test && npx playwright show-report",
     "test:ui": "playwright test --ui"
   },
   "keywords": [],
