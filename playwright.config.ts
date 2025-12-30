@@ -23,6 +23,10 @@ export default defineConfig({
   use: {
     /* Can use CLI Override options if provided. */
     baseURL: 'https://the-internet.herokuapp.com/',
+    
+    // Override default `data-testid` when using page.getByTestId():
+    // this will now become `page.getByTestId('[data-test="xyz"]');`
+    testIdAttribute: 'data-test',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
