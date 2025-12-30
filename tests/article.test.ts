@@ -34,7 +34,8 @@ setup.describe('Article Tests Demo', { tag: tags.SMOKE }, () => {
       await articlePage.clickAddElementButton();
       await articlePage.expectNumDeleteButtonsPresent(2);
       await articlePage.clickAddElementButton();
-      await articlePage.expectNumDeleteButtonsPresent(3);
+      // Forcing the test to fail here in "PR Builder" Test:
+      await articlePage.expectNumDeleteButtonsPresent();
     });
     await setup.step('Click Delete buttons', async () => {
       /*
