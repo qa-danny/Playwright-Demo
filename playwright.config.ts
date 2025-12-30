@@ -8,7 +8,7 @@ const mobileViewport = { width: 430, height: 845 };
  */
 export default defineConfig({
   testDir: './tests',
-  testMatch: ['**/*.test.ts'],
+  testMatch: ['**/*.test.ts', '**/*.setup.ts'],
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
