@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ main, master ]
 jobs:
+  # To block PR's from being merged automatically, go to Settings/Branches, add generic rule.
+  # Then, under "Protect Matching Branches"
+    # Require Status Checks to Pass Before Merging
+      # In search box under "Require Branches To Be Up To Date Before Merging",
+      # add "Run_Tests" and select the value from the dropdown.
   Run_Tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
