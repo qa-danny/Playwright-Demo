@@ -2,14 +2,15 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Example tests', () => {
   test('has title', async ({ page }) => {
-    await page.goto('https://playwright.dev/');
+    // have to add a non-null assertion (the ! at the end) to make sure it is a string
+    await page.goto(process.env.PLAYWRIGHTURL!);
 
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Playwright/);
   });
 
   test('get started link', async ({ page }) => {
-    await page.goto('https://playwright.dev/');
+    await page.goto(process.env.PLAYWRIGHTURL!);
 
     // Click the get started link.
     await page.getByRole('link', { name: 'Get started' }).click();
