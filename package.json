@@ -6,7 +6,8 @@
     "test:all": "playwright test",
     "test:headed": "playwright test --headed",
     "test:headed:chromium": "playwright test --headed --project chromium",
-    "test:ui": "playwright test --ui"
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright test tests/example.test.ts && npx playwright show-report"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,8 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.56.1",
-    "@types/node": "^24.9.1"
+    "@types/node": "^24.9.1",
+    "dotenv": "^17.2.3"
   },
   "dependencies": {
     "playwright": "^1.56.1",
