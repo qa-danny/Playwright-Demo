@@ -1,14 +1,17 @@
 import { test as base, Page } from '@playwright/test';
-import { HomePage } from '../pages/homePage';
+
 import { ArticlePage } from '../pages/articlePage';
-import { MockApiPage } from '../pages/mockApiPage';
+import { ContactUsPage } from '../pages/contactUsPage';
+import { HomePage } from '../pages/homePage';
 import { LoginPage } from '../pages/loginPage';
+import { MockApiPage } from '../pages/mockApiPage';
 
 export type FrameworkFixtures = {
-    homePage: HomePage;
-    articlePage: ArticlePage;
-    mockApiPage: MockApiPage;
-    loginCustomerWorkflow: LoginPage;
+  articlePage: ArticlePage;
+  contactUsPage: ContactUsPage;
+  homePage: HomePage;
+  loginCustomerWorkflow: LoginPage;
+  mockApiPage: MockApiPage;
 };
 
 export type MyOptions = {
@@ -17,23 +20,23 @@ export type MyOptions = {
 }
 
 export const test = base.extend<FrameworkFixtures, MyOptions>({
-  homePage: async ({ page }, use) => {
-    // In this type of fixture, anything done above the `await use()` will be done first, like a `beforeEach()`.
-    // In similar fashion, anything after the `await use()` will be done after the test.
-    await use(new HomePage(page));
-  },
+  // Default values for Fixtures:
+  email: ['customer@practicesoftwaretesting.com', { scope: 'worker', option: true }],
+  password: ['welcome01', { scope: 'worker', option: true }],
 
   articlePage: async ({ page }, use) => {
     await use(new ArticlePage(page));
   },
 
-  mockApiPage: async ({ page }, use) => {
-    await use(new MockApiPage(page));
+  contactUsPage: async ({ page }, use) => {
+    await use(new ContactUsPage(page));
   },
 
-  // Default values for Fixtures:
-  email: ['customer@practicesoftwaretesting.com', { scope: 'worker', option: true }],
-  password: ['welcome01', { scope: 'worker', option: true }],
+  homePage: async ({ page }, use) => {
+    // In this type of fixture, anything done above the `await use()` will be done first, like a `beforeEach()`.
+    // In similar fashion, anything after the `await use()` will be done after the test.
+    await use(new HomePage(page));
+  },
 
   // Re-usable Workflow to sign customer in to account. See `auth.test.ts`
   loginCustomerWorkflow: async ({ page, email, password }: { page: Page, email: string, password: string }, use): Promise<void> => {
@@ -45,6 +48,10 @@ export const test = base.extend<FrameworkFixtures, MyOptions>({
     
     // Provide the LoginPage instance to the test
     await use(loginPage);
+  },
+
+  mockApiPage: async ({ page }, use) => {
+    await use(new MockApiPage(page));
   }
 });
 
