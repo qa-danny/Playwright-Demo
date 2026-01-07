@@ -81,7 +81,7 @@ export class ContactUsPage {
     await this.fillEmail(email);
     await this.selectSubject(subject);
     await this.fillMessage(msg);
-    if (!!attachment) {
+    if (attachment) {
       console.log('Adding Attachment for Later!');
     }
     await this.clickSubmitButton();
