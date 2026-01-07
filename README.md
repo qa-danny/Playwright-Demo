@@ -80,3 +80,13 @@ Run a single file in only Chromium, viewing in browser:
 npx playwright test tests/example.test.ts --headed --project=chromium
 ```
 ---
+
+Visual Regression Test Command to Run & Update Snapshot:
+
+```bash
+npx playwright test tests/homepage.test.ts:44 --update-snapshots
+```
+After the tests run and if there is a diff, it will appear in the HTML report, which can be accessed with this command:
+```bash
+npx playwright show-report
+```

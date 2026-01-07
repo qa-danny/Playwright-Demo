@@ -41,4 +41,13 @@ setup.describe('Homepage Tests Demo', () => {
       }
     });
   });
+  setup('Visual Test', async ({ homePage, page }) => {
+    // For more information on Visual Regression Testing with Playwright,
+    // check out the docs at https://playwright.dev/docs/api/class-pageassertions#page-assertions-to-have-screenshot-1
+    // Within the options object, `fullPage` will take a full page screenshot,
+    // and `mask` will cover up an element, blocking it from being included in the comparison.
+    // For CI, see docs at https://playwright.dev/docs/test-snapshots
+    await homePage.navigate();
+    await expect(page).toHaveScreenshot('homepage-visual-test.png', { fullPage: true, mask: [page.getByAltText('Fork me on GitHub')] });
+  });
 });
